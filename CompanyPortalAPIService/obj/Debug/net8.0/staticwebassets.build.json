@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "D9Yb4Pd5aZSIMude2vMvnpM5aP4Szbr/KCTbRaCy/TM=",
+  "Source": "CompanyPortalAPIService",
+  "BasePath": "_content/CompanyPortalAPIService",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

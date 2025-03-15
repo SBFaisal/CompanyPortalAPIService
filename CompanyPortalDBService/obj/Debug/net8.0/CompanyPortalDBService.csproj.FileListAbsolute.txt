@@ -1,0 +1,14 @@
+C:\Work\NewFolder\Reverse\CompanyPortalAPIService\CompanyPortalDBService\bin\Debug\net8.0\CompanyPortalDBService.deps.json
+C:\Work\NewFolder\Reverse\CompanyPortalAPIService\CompanyPortalDBService\bin\Debug\net8.0\CompanyPortalDBService.runtimeconfig.json
+C:\Work\NewFolder\Reverse\CompanyPortalAPIService\CompanyPortalDBService\bin\Debug\net8.0\CompanyPortalDBService.dll
+C:\Work\NewFolder\Reverse\CompanyPortalAPIService\CompanyPortalDBService\bin\Debug\net8.0\CompanyPortalDBService.pdb
+C:\Work\NewFolder\Reverse\CompanyPortalAPIService\CompanyPortalDBService\obj\Debug\net8.0\CompanyPortalDBService.csproj.AssemblyReference.cache
+C:\Work\NewFolder\Reverse\CompanyPortalAPIService\CompanyPortalDBService\obj\Debug\net8.0\CompanyPortalDBService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Work\NewFolder\Reverse\CompanyPortalAPIService\CompanyPortalDBService\obj\Debug\net8.0\CompanyPortalDBService.AssemblyInfoInputs.cache
+C:\Work\NewFolder\Reverse\CompanyPortalAPIService\CompanyPortalDBService\obj\Debug\net8.0\CompanyPortalDBService.AssemblyInfo.cs
+C:\Work\NewFolder\Reverse\CompanyPortalAPIService\CompanyPortalDBService\obj\Debug\net8.0\CompanyPortalDBService.csproj.CoreCompileInputs.cache
+C:\Work\NewFolder\Reverse\CompanyPortalAPIService\CompanyPortalDBService\obj\Debug\net8.0\CompanyPortalDBService.dll
+C:\Work\NewFolder\Reverse\CompanyPortalAPIService\CompanyPortalDBService\obj\Debug\net8.0\refint\CompanyPortalDBService.dll
+C:\Work\NewFolder\Reverse\CompanyPortalAPIService\CompanyPortalDBService\obj\Debug\net8.0\CompanyPortalDBService.pdb
+C:\Work\NewFolder\Reverse\CompanyPortalAPIService\CompanyPortalDBService\obj\Debug\net8.0\CompanyPortalDBService.genruntimeconfig.cache
+C:\Work\NewFolder\Reverse\CompanyPortalAPIService\CompanyPortalDBService\obj\Debug\net8.0\ref\CompanyPortalDBService.dll
