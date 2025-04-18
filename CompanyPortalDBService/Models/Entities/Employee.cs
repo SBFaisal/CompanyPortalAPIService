@@ -13,7 +13,7 @@ namespace CompanyPortalDBService.Models.Entities
         public string? ContactNo { get; set; }
         public required string EmailId { get; set; }
         public Guid DeparmentId { get; set; }
-        public Guid ProjectId { get; set; }
+        public Guid? ProjectId { get; set; }
         public required string Password { get; set; }
         public string? Gender { get; set; }
         public string? Role { get; set; }

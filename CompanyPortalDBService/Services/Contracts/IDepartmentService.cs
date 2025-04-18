@@ -10,12 +10,12 @@ namespace CompanyPortalDBService.Services.Contracts
     public interface IDepartmentService
     {
         List<Department> GetAllDepartments();
-        Department GetDepartmentById(Guid id);
+        Department GetDepartmentById(string id);
         List<Department> GetAllParentDepartments();
-        Department AddDepartment(Department department);
-        Department UpdateDepartment(Department department);
-        string DeleteDepartment(Guid id);
+        bool AddDepartment(Department department);
+        bool UpdateDepartment(Department department, string id);
+        bool DeleteDepartment(string id);
         List<Department> GetAllChildDepartments();
-        List<Department> GetChildDepartmentsByParentId(Guid parentId);
+        List<Department> GetChildDepartmentsByParentId(string parentId);
     }
 }

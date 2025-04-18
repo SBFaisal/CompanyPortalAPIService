@@ -1,41 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Work\\NewFolder\\Reverse\\CompanyPortalAPIService\\CompanyPortalAPIService\\CompanyPortalAPIService.csproj": {}
+    "/Users/mohammadfaisal/Desktop/CompanyPortalAPIService copy/CompanyPortalAPIService/CompanyPortalAPIService.csproj": {}
   },
   "projects": {
-    "C:\\Work\\NewFolder\\Reverse\\CompanyPortalAPIService\\CompanyPortalAPIService\\CompanyPortalAPIService.csproj": {
+    "/Users/mohammadfaisal/Desktop/CompanyPortalAPIService copy/CompanyPortalAPIService/CompanyPortalAPIService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Work\\NewFolder\\Reverse\\CompanyPortalAPIService\\CompanyPortalAPIService\\CompanyPortalAPIService.csproj",
+        "projectUniqueName": "/Users/mohammadfaisal/Desktop/CompanyPortalAPIService copy/CompanyPortalAPIService/CompanyPortalAPIService.csproj",
         "projectName": "CompanyPortalAPIService",
-        "projectPath": "C:\\Work\\NewFolder\\Reverse\\CompanyPortalAPIService\\CompanyPortalAPIService\\CompanyPortalAPIService.csproj",
-        "packagesPath": "C:\\Users\\MohammadFaisal\\.nuget\\packages\\",
-        "outputPath": "C:\\Work\\NewFolder\\Reverse\\CompanyPortalAPIService\\CompanyPortalAPIService\\obj\\",
+        "projectPath": "/Users/mohammadfaisal/Desktop/CompanyPortalAPIService copy/CompanyPortalAPIService/CompanyPortalAPIService.csproj",
+        "packagesPath": "/Users/mohammadfaisal/.nuget/packages/",
+        "outputPath": "/Users/mohammadfaisal/Desktop/CompanyPortalAPIService copy/CompanyPortalAPIService/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\MohammadFaisal\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.1.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/mohammadfaisal/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\DevExpress 20.1\\Components\\System\\Components\\Packages": {},
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Work\\NewFolder\\Reverse\\CompanyPortalAPIService\\CompanyPortalDBService\\CompanyPortalDBService.csproj": {
-                "projectPath": "C:\\Work\\NewFolder\\Reverse\\CompanyPortalAPIService\\CompanyPortalDBService\\CompanyPortalDBService.csproj"
+              "/Users/mohammadfaisal/Desktop/CompanyPortalAPIService copy/CompanyPortalDBService/CompanyPortalDBService.csproj": {
+                "projectPath": "/Users/mohammadfaisal/Desktop/CompanyPortalAPIService copy/CompanyPortalDBService/CompanyPortalDBService.csproj"
               }
             }
           }
@@ -49,8 +41,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.200"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -94,34 +85,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Work\\NewFolder\\Reverse\\CompanyPortalAPIService\\CompanyPortalDBService\\CompanyPortalDBService.csproj": {
+    "/Users/mohammadfaisal/Desktop/CompanyPortalAPIService copy/CompanyPortalDBService/CompanyPortalDBService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Work\\NewFolder\\Reverse\\CompanyPortalAPIService\\CompanyPortalDBService\\CompanyPortalDBService.csproj",
+        "projectUniqueName": "/Users/mohammadfaisal/Desktop/CompanyPortalAPIService copy/CompanyPortalDBService/CompanyPortalDBService.csproj",
         "projectName": "CompanyPortalDBService",
-        "projectPath": "C:\\Work\\NewFolder\\Reverse\\CompanyPortalAPIService\\CompanyPortalDBService\\CompanyPortalDBService.csproj",
-        "packagesPath": "C:\\Users\\MohammadFaisal\\.nuget\\packages\\",
-        "outputPath": "C:\\Work\\NewFolder\\Reverse\\CompanyPortalAPIService\\CompanyPortalDBService\\obj\\",
+        "projectPath": "/Users/mohammadfaisal/Desktop/CompanyPortalAPIService copy/CompanyPortalDBService/CompanyPortalDBService.csproj",
+        "packagesPath": "/Users/mohammadfaisal/.nuget/packages/",
+        "outputPath": "/Users/mohammadfaisal/Desktop/CompanyPortalAPIService copy/CompanyPortalDBService/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\MohammadFaisal\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.1.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/mohammadfaisal/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\DevExpress 20.1\\Components\\System\\Components\\Packages": {},
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -139,8 +122,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.200"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -177,7 +159,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

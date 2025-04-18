@@ -1,6 +1,6 @@
 ﻿using CompanyPortalDBService.Models.Entities;
+using CompanyPortalDBService.Services;
 using CompanyPortalDBService.Services.Contracts;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CompanyPortalAPIService.Controllers
@@ -26,28 +26,64 @@ namespace CompanyPortalAPIService.Controllers
         [Route("GetEmployee/{id}")]
         public IActionResult GetEmployee(string id)
         {
-            return Ok(_employeeService.GetEmployeeById(new Guid(id)));
+            return Ok(_employeeService.GetEmployeeById(id));
         }
 
         [HttpPost]
         [Route("AddEmployee")]
         public IActionResult AddEmployee([FromBody] Employee employee)
         {
-            return Ok(_employeeService.AddEmployee(employee));
+            try
+            {
+                bool isSuccess = _employeeService.AddEmployee(employee);
+                if (isSuccess)
+                {
+                    return Ok(true);
+                }
+                return BadRequest();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest("Some Error Occured!!!");
+            }
         }
 
         [HttpPost]
         [Route("UpdateEmployee")]
-        public IActionResult UpdateEmployee([FromBody] Employee employee)
+        public IActionResult UpdateEmployee([FromBody] Employee employee, string id)
         {
-            return Ok(_employeeService.UpdateEmployee(employee));
+            try
+            {
+                bool isSuccess = _employeeService.UpdateEmployee(employee, id);
+                if (isSuccess)
+                {
+                    return Ok(true);
+                }
+                return BadRequest();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest("Some Error Occured!!!");
+            }
         }
 
         [HttpDelete]
         [Route("DeleteEmployee/{id}")]
         public IActionResult DeleteEmployee(string id)
         {
-            return Ok(_employeeService.DeleteEmployee(new Guid(id)));
+            try
+            {
+                bool isSuccess = _employeeService.DeleteEmployee(id);
+                if (isSuccess)
+                {
+                    return Ok(true);
+                }
+                return BadRequest();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest("Some Error Occured!!!");
+            }
         }
     }
 }

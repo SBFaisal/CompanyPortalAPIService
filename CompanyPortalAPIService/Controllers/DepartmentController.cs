@@ -1,6 +1,5 @@
 ﻿using CompanyPortalDBService.Models.Entities;
 using CompanyPortalDBService.Services.Contracts;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CompanyPortalAPIService.Controllers
@@ -37,7 +36,7 @@ namespace CompanyPortalAPIService.Controllers
         {
             try
             {
-                var response = _departmentService.GetDepartmentById(new Guid(id));
+                var response = _departmentService.GetDepartmentById(id);
                 return Ok(response);
             }
             catch (Exception ex)
@@ -66,24 +65,32 @@ namespace CompanyPortalAPIService.Controllers
         {
             try
             {
-                var response = _departmentService.AddDepartment(department);
-                return Ok(response);
+                bool isSuccess = _departmentService.AddDepartment(department);
+                if (isSuccess)
+                {
+                    return Ok(true);
+                }
+                return BadRequest();
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message);
+                return BadRequest("Some Error Occured!!!");
             }
 
         }
 
         [HttpPost]
         [Route("UpdateDepartment")]
-        public IActionResult UpdateDepartment([FromBody] Department department)
+        public IActionResult UpdateDepartment([FromBody] Department department, string id)
         {
             try
             {
-                var response = _departmentService.UpdateDepartment(department);
-                return Ok(response);
+                var isSuccess = _departmentService.UpdateDepartment(department, id);
+                if (isSuccess)
+                {
+                    return Ok(true);
+                }
+                return BadRequest();
             }
             catch (Exception ex)
             {
@@ -97,8 +104,12 @@ namespace CompanyPortalAPIService.Controllers
         {
             try
             {
-                var response = _departmentService.DeleteDepartment(new Guid(id));
-                return Ok(response);
+                var isSuccess = _departmentService.DeleteDepartment(id);
+                if (isSuccess)
+                {
+                    return Ok(true);
+                }
+                return BadRequest();
             }
             catch (Exception ex)
             {
@@ -117,7 +128,7 @@ namespace CompanyPortalAPIService.Controllers
         [Route("GetChildDepartmentsByParentId/{parentId}")]
         public IActionResult GetChildDepartmentsByParentId(string parentId)
         {
-            return Ok(_departmentService.GetChildDepartmentsByParentId(new Guid(parentId)));
+            return Ok(_departmentService.GetChildDepartmentsByParentId(parentId));
         }
     }
 }

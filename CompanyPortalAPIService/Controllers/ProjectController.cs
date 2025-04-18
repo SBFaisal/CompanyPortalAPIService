@@ -1,6 +1,5 @@
 ﻿using CompanyPortalDBService.Models.Entities;
 using CompanyPortalDBService.Services.Contracts;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CompanyPortalAPIService.Controllers
@@ -35,7 +34,7 @@ namespace CompanyPortalAPIService.Controllers
         {
             try
             {
-                var response = _projectService.GetProjectById(new Guid(id));
+                var response = _projectService.GetProjectById(id);
                 return Ok(response);
             }
             catch (Exception ex)
@@ -50,27 +49,35 @@ namespace CompanyPortalAPIService.Controllers
         {
             try
             {
-                var response = _projectService.AddProject(project);
-                return Ok(response);
+                var isSuccess = _projectService.AddProject(project);
+                if (isSuccess)
+                {
+                    return Ok(true);
+                }
+                return BadRequest();
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message);
+                return BadRequest("Some Error Occured!!!");
             }
         }
 
         [HttpPost]
         [Route("UpdateProject")]
-        public IActionResult UpdateProject([FromBody] Project project)
+        public IActionResult UpdateProject([FromBody] Project project, string id)
         {
             try
             {
-                var response = _projectService.UpdateProject(project);
-                return Ok(response);
+                var isSuccess = _projectService.UpdateProject(project, id);
+                if (isSuccess)
+                {
+                    return Ok(true);
+                }
+                return BadRequest();
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message);
+                return BadRequest("Some Error Occured!!!");
             }
         }
 
@@ -80,12 +87,16 @@ namespace CompanyPortalAPIService.Controllers
         {
             try
             {
-                var response = _projectService.DeleteProject(new Guid(id));
-                return Ok(response);
+                var isSuccess = _projectService.DeleteProject(id);
+                if (isSuccess)
+                {
+                    return Ok(true);
+                }
+                return BadRequest();
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message);
+                return BadRequest("Some Error Occured!!!");
             }
         }
 
@@ -95,7 +106,7 @@ namespace CompanyPortalAPIService.Controllers
         {
             try
             {
-                var response = _projectService.GetAllProjectsByDepartmentId(new Guid(id));
+                var response = _projectService.GetAllProjectsByDepartmentId(id);
                 return Ok(response);
             }
             catch (Exception ex)

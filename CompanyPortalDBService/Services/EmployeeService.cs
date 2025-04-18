@@ -1,4 +1,5 @@
 ﻿using CompanyPortalDBService.DbContext;
+using CompanyPortalDBService.Models.DTO;
 using CompanyPortalDBService.Models.Entities;
 using CompanyPortalDBService.Services.Contracts;
 
@@ -17,51 +18,106 @@ namespace CompanyPortalDBService.Services
             return _context.Employees.ToList();
         }
 
-        public Employee GetEmployeeById(Guid id)
+        public EmployeeDTO GetEmployeeById(string id)
         {
-            return _context.Employees.FirstOrDefault(e => e.Id == id);
-        }
-
-        public Employee AddEmployee(Employee employee)
-        {
-            try
-            {
-                _context.Employees.Add(employee);
-                _context.SaveChanges();
-                return employee;
-            }
-            catch (Exception ex)
+            Guid parsedId = Guid.Empty;
+            if (!Guid.TryParse(id, out parsedId))
             {
                 return null;
             }
-        }
-
-        public Employee UpdateEmployee(Employee employee)
-        {
             try
             {
-                _context.Employees.Update(employee);
-                _context.SaveChanges();
-                return employee;
+                var employee = _context.Employees.Find(parsedId);
+                if (employee != null)
+                {
+                    return createEmployeeDTO(employee);
+                }
             }
             catch
             {
                 return null;
             }
-
+            return null;
         }
 
-        public string DeleteEmployee(Guid id)
+        public bool AddEmployee(Employee employee)
         {
-            var employee = _context.Employees.FirstOrDefault(e => e.Id == id);
-            if (employee != null)
+            try
             {
-                _context.Employees.Remove(employee);
+                _context.Employees.Add(employee);
                 _context.SaveChanges();
-                return "Employee deleted successfully";
+                return true;
             }
-            return "Employee not found";
+            catch (Exception ex)
+            {
+                return false;
+            }
         }
 
+        public bool UpdateEmployee(Employee employee, string id)
+        {
+            Guid parsedId = Guid.Empty;
+            if (!Guid.TryParse(id, out parsedId))
+            {
+                return false;
+            }
+            try
+            {
+                var obj = _context.Employees.Find(parsedId);
+                if (obj != null)
+                {
+                    _context.Employees.Update(employee);
+                    _context.SaveChanges();
+                    return true;
+                }
+                return false;
+            }
+            catch
+            {
+                throw;
+            }
+
+        }
+
+        public bool DeleteEmployee(string id)
+        {
+            Guid parsedId = Guid.Empty;
+            if (!Guid.TryParse(id, out parsedId))
+            {
+                return false;
+            }
+            try
+            {
+                var employee = _context.Employees.FirstOrDefault(e => e.Id == parsedId);
+                if (employee != null)
+                {
+                    _context.Employees.Remove(employee);
+                    _context.SaveChanges();
+                    return true;
+                }
+                return false;
+            }
+            catch
+            {
+                throw;
+            }
+            
+        }
+
+        private EmployeeDTO createEmployeeDTO(Employee employee)
+        {
+            EmployeeDTO employeeDTO = new EmployeeDTO
+            {
+                EmployeeName = employee.EmployeeName,
+                ContactNo = employee.ContactNo,
+                EmailId = employee.EmailId,
+                DeparmentName = employee.DeparmentId.ToString(),
+                ProjectName = employee.ProjectId.ToString(),
+                Gender = employee.Gender,
+                Role = employee.Role,
+                CreatedDate = employee.CreatedDate
+            };
+            return employeeDTO;
+        }
     }
 }

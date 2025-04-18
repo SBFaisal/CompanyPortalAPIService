@@ -10,10 +10,10 @@ namespace CompanyPortalDBService.Services.Contracts
     public interface IProjectService
     {
         List<Project> GetAllProjects();
-        Project GetProjectById(Guid id);
-        Project AddProject(Project project);
-        Project UpdateProject(Project project);
-        string DeleteProject(Guid id);
-        List<Project> GetAllProjectsByDepartmentId(Guid id);
+        Project GetProjectById(string id);
+        bool AddProject(Project project);
+        bool UpdateProject(Project project, string id);
+        bool DeleteProject(string id);
+        List<Project> GetAllProjectsByDepartmentId(string id);
     }
 }
